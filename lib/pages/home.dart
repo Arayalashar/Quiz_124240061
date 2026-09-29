@@ -15,14 +15,14 @@ class Home extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DetailPage(culinary: culinaryList[index]),
+                  builder: (context) => DetailPage(food: culinaryList[index]),
                 ),
               );
             },
             child: ListTile(
               title: Text(culinaryList[index].name),
-              subtitle: Text(culinaryList[index].category),
-              leading: Image.network(culinaryList[index].imageUrl),
+              subtitle: Text('${culinaryList[index].category}'" - "'${culinaryList[index].origin}'),
+              leading: Image.network(culinaryList[index].imageUrl, width: 50, height: 50, fit: BoxFit.cover),
               trailing: Icon(Icons.arrow_forward_ios),
             ),
           );

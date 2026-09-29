@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/home.dart';
+import 'pages/profil.dart';
 
 class Root extends StatefulWidget {
   const Root({super.key});
@@ -14,7 +15,7 @@ class Root extends StatefulWidget {
   Widget build(BuildContext context) {
     List<Widget> pages = [
       const Home(), 
-      const Center(child: Text("Profil"))
+      const ProfilPage()
     ];
     List<String> pageTitles = ["Home Page", "Profil Page"];
 
